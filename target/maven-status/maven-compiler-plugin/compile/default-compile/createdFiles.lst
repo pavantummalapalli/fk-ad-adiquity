@@ -1,0 +1,4 @@
+com/flipkart/adq/resources/BrandAdsCampaigns.class
+com/flipkart/adq/mapper/PublisherDateMapper.class
+com/flipkart/adq/dao/PublisherDateDAO.class
+com/flipkart/adq/model/PublisherDate.class

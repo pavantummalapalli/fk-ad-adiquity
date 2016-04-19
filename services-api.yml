@@ -1,0 +1,120 @@
+healthCheckProperty: Flipkart ThunderingRhino Ad
+
+server:
+  requestLog:
+    appenders:
+      - type: file
+        currentLogFilename: /var/log/flipkart/adq/fk-adq/access.log
+        archivedLogFilenamePattern: /var/log/flipkart/adq/access-%d.log
+        archivedFileCount: 10
+  applicationConnectors:
+    - type: http
+      port: 25916
+  adminConnectors:
+    - type: http
+      port: 25917
+
+logging:
+  # Enable below DEBUG config for enable Debugging.
+  #loggers:
+  #  "com.flipkart.flap": DEBUG
+  level: INFO
+  appenders:
+      - type: file
+        # The file to which current statements will be logged.
+        currentLogFilename: /var/log/flipkart/adq/fk-adq/app.log
+
+        # When the log file rotates, the archived log will be renamed to this and gzipped. The
+        # %d is replaced with the previous day (yyyy-MM-dd). Custom rolling windows can be created
+        # by passing a SimpleDateFormat-compatible format as an argument: "%d{yyyy-MM-dd-hh}".
+        archivedLogFilenamePattern: /var/log/flipkart/adq/fk-adq/app-%d.log
+
+        # The number of archived files to keep.
+        archivedFileCount: 10
+
+        # The timezone used to format dates. HINT: USE THE DEFAULT, UTC.
+        timeZone: UTC
+
+redisHost: 127.0.0.1
+redisPort: 6379
+
+database:
+  # the name of your JDBC driver
+  driverClass: com.mysql.jdbc.Driver
+
+  # the username
+  user: gjx_core
+
+  # the password
+  password: gjx123
+
+  # the JDBC URL
+  url: jdbc:mysql://127.0.0.1:9977/gjx_reports_m?autoReconnect=true
+
+  # any properties specific to your JDBC driver:
+  properties:
+    charSet: UTF-8
+
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 1s
+
+  # the SQL query to run when validating a connection's liveness
+  validationQuery: "/* MyService Health Check */ SELECT 1"
+
+  # the minimum number of connections to keep open
+  minSize: 8
+
+  # the maximum number of connections to keep open
+  maxSize: 32
+
+  # whether or not idle connections should be validated
+  checkConnectionWhileIdle: false
+
+  # the amount of time to sleep between runs of the idle connection validation, abandoned cleaner and idle pool resizing
+  evictionInterval: 10s
+
+  # the minimum amount of time an connection must sit idle in the pool before it is eligible for eviction
+  minIdleTime: 1 minute
+
+database2:
+  # the name of your JDBC driver
+  driverClass: com.mysql.jdbc.Driver
+
+  # the username
+  user: gjx_core
+
+  # the password
+  password: gjx123
+
+  # the JDBC URL
+  url: jdbc:mysql://127.0.0.1:9988/gjx_reports_m?autoReconnect=true
+
+  # any properties specific to your JDBC driver:
+  properties:
+    charSet: UTF-8
+
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 1s
+
+  # the SQL query to run when validating a connection's liveness
+  validationQuery: "/* MyService Health Check */ SELECT 1"
+
+  # the minimum number of connections to keep open
+  minSize: 8
+
+  # the maximum number of connections to keep open
+  maxSize: 32
+
+  # whether or not idle connections should be validated
+  checkConnectionWhileIdle: false
+
+  # the amount of time to sleep between runs of the idle connection validation, abandoned cleaner and idle pool resizing
+  evictionInterval: 10s
+
+  # the minimum amount of time an connection must sit idle in the pool before it is eligible for eviction
+  minIdleTime: 1 minute
+
+
+
+
+
