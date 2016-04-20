@@ -203,6 +203,7 @@ public class BrandAdsResource  {
                 .bind("enTime",enTime)
                 .map(StringMapper.FIRST)
                 .first();
+
         Map<String ,String> metricResultMap = new HashMap<>();
 
         try{
@@ -609,6 +610,100 @@ public class BrandAdsResource  {
         return getIntervals(handle,query,startTime,endTime);
     }
 
+    @GET
+    @Path("/desktoptotalfillrate")
+    @Produces("application/json")
+    public Response desktopTotalFillRate(){
+
+        String serveredImpressions = "select a.zoneid,sum(a.imp) as servedImpressions from gjx_cdv_atm_znbn_tz  a join `gjx_core_db`.ox_banners ban on a.bannerid=ban.`bannerid` join `gjx_core_db`.ox_campaigns cam on ban.`campaignid`=cam.`campaignid` and cam.affiliate_type='WEB_SITES-DESKTOP' and cam.`campaign_type`='BRANDAD' group by a.zoneid;";
+
+        LinkedHashMap<String,Double> sumImpressionsperZoneIdMap = handle.createQuery(serveredImpressions).fold(new LinkedHashMap<String,Double>(), new Folder2<LinkedHashMap<String, Double>>() {
+            @Override
+            public LinkedHashMap<String, Double> fold(LinkedHashMap<String, Double> accumulator, ResultSet rs, StatementContext ctx) throws SQLException {
+                accumulator.put(rs.getString("zoneid"),rs.getDouble("servedImpressions"));
+                return accumulator;
+            }
+        });
+
+        double sumofImpressions = sumImpressionsperZoneIdMap.entrySet().stream().mapToDouble
+                (Map.Entry::getValue).sum();
+
+        List<String> zoneIds = new ArrayList<>();
+        zoneIds.addAll(sumImpressionsperZoneIdMap.keySet());
+
+        String metric = handle2.attach(FillRateExternalizedSqlDAO.class).getTotalFillRate(sumofImpressions,zoneIds);
+        Map<String ,String> metricResultMap = new HashMap<>();
+
+        try{
+            if(metric == null){
+                metricResultMap.put("success","false");
+                return Response.status(Response.Status.NOT_FOUND)
+                        .header("Access-Control-Allow-Origin", "*")
+                        .header("Access-Control-Allow-Methods", "GET")
+                        .entity(metricResultMap).build();
+            }
+
+            metricResultMap.put("metric",metric);
+            metricResultMap.put("success","true");
+            return Response.ok()
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET")
+                    .entity(metricResultMap)
+                    .build();
+        }
+        catch (Exception e){
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GET
+    @Path("/apptotalfillrate")
+    @Produces("application/json")
+    public Response appTotalFillRate(){
+
+        String serveredImpressions = "select a.zoneid,sum(a.imp) as servedImpressions from gjx_cdv_atm_znbn_tz a join `gjx_core_db`.ox_banners ban on a.bannerid=ban.`bannerid` join `gjx_core_db`.ox_campaigns cam on ban.`campaignid`=cam.`campaignid` and cam.affiliate_type='ANDROID_APPS' and cam.`campaign_type`='BRANDAD' group by a.zoneid;";
+
+        LinkedHashMap<String,Double> sumImpressionsperZoneIdMap = handle.createQuery(serveredImpressions).fold(new LinkedHashMap<String,Double>(), new Folder2<LinkedHashMap<String, Double>>() {
+            @Override
+            public LinkedHashMap<String, Double> fold(LinkedHashMap<String, Double> accumulator, ResultSet rs, StatementContext ctx) throws SQLException {
+                accumulator.put(rs.getString("zoneid"),rs.getDouble("servedImpressions"));
+                return accumulator;
+            }
+        });
+
+        double sumofImpressions = sumImpressionsperZoneIdMap.entrySet().stream().mapToDouble
+                (Map.Entry::getValue).sum();
+
+        List<String> zoneIds = new ArrayList<>();
+        zoneIds.addAll(sumImpressionsperZoneIdMap.keySet());
+
+        String metric = handle2.attach(FillRateExternalizedSqlDAO.class).getTotalFillRate(sumofImpressions,zoneIds);
+        Map<String ,String> metricResultMap = new HashMap<>();
+
+        try{
+            if(metric == null){
+                metricResultMap.put("success","false");
+                return Response.status(Response.Status.NOT_FOUND)
+                        .header("Access-Control-Allow-Origin", "*")
+                        .header("Access-Control-Allow-Methods", "GET")
+                        .entity(metricResultMap).build();
+            }
+
+            metricResultMap.put("metric",metric);
+            metricResultMap.put("success","true");
+            return Response.ok()
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET")
+                    .entity(metricResultMap)
+                    .build();
+        }
+        catch (Exception e){
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+
+    }
+
+
 
     @GET
     @Path("/desktopintervalfillrate")
@@ -658,6 +753,78 @@ public class BrandAdsResource  {
                 .entity(fillRateIntervalMap).build();
     }
 
+
+    @GET
+    @Path("/desktoptotalrequests")
+    @Produces("application/json")
+    public Response desktopTotalRequests(){
+        String ZoneIntervalquery = "select distinct zoneid from gjx_cdv_atm_znbn_tz a join `gjx_core_db`.ox_banners ban on a.bannerid=ban.`bannerid` join `gjx_core_db`.ox_campaigns cam on ban.`campaignid`=cam.`campaignid` and cam.affiliate_type='WEB_SITES-DESKTOP' and cam.`campaign_type`='BRANDAD';";
+
+        List<String> zoneIds = handle.createQuery(ZoneIntervalquery).map(StringMapper.FIRST).list();
+        String metric  = handle2.attach(FillRateExternalizedSqlDAO.class).getTotalRequests(zoneIds);
+
+        Map<String ,String> metricResultMap = new HashMap<>();
+
+        try{
+            if(metric == null){
+                metricResultMap.put("success","false");
+                return Response.status(Response.Status.NOT_FOUND)
+                        .header("Access-Control-Allow-Origin", "*")
+                        .header("Access-Control-Allow-Methods", "GET")
+                        .entity(metricResultMap).build();
+            }
+
+            metricResultMap.put("metric",metric);
+            metricResultMap.put("success","true");
+            return Response.ok()
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET")
+                    .entity(metricResultMap)
+                    .build();
+        }
+        catch (Exception e){
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+
+    }
+
+
+    @GET
+    @Path("/apptotalrequests")
+    @Produces("application/json")
+    public Response appTotalRequests(){
+        String ZoneIntervalquery = "select distinct zoneid from gjx_cdv_atm_znbn_tz a join `gjx_core_db`.ox_banners ban on a.bannerid=ban.`bannerid` join `gjx_core_db`.ox_campaigns cam on ban.`campaignid`=cam.`campaignid` and cam.affiliate_type='ANDROID_APPS' and cam.`campaign_type`='BRANDAD';";
+
+        List<String> zoneIds = handle.createQuery(ZoneIntervalquery).map(StringMapper.FIRST).list();
+        String metric  = handle2.attach(FillRateExternalizedSqlDAO.class).getTotalRequests(zoneIds);
+
+        Map<String ,String> metricResultMap = new HashMap<>();
+
+        try{
+            if(metric == null){
+                metricResultMap.put("success","false");
+                return Response.status(Response.Status.NOT_FOUND)
+                        .header("Access-Control-Allow-Origin", "*")
+                        .header("Access-Control-Allow-Methods", "GET")
+                        .entity(metricResultMap).build();
+            }
+
+            metricResultMap.put("metric",metric);
+            metricResultMap.put("success","true");
+            return Response.ok()
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET")
+                    .entity(metricResultMap)
+                    .build();
+        }
+        catch (Exception e){
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+
+    }
+
+
+
     @GET
     @Path("/desktopintervalrequests")
     @Produces("application/json")
@@ -678,6 +845,7 @@ public class BrandAdsResource  {
                 return zoneInterval;
             }
         }).list();
+
 
         List<RequestsZoneIdInterval> requestsZoneIdIntervalMapList = handle2.createQuery(zoneRequestIntervalQuery).bind("strTime",strTime).bind("enTime",enTime).map(new ResultSetMapper<RequestsZoneIdInterval>() {
             @Override
@@ -818,7 +986,7 @@ public class BrandAdsResource  {
     @Path("/desktopsumintervalimpressions")
     @Produces("application/json")
     public Response desktopSumIntervalimpressions(@QueryParam("starttime") String startTime,@QueryParam("endtime") String endTime){
-        String query ="select  sum(b.bcn) as metric as metric from `gjx_bi_hly_cdv_znbn_tz` b join `gjx_core_db`.ox_banners ban on b.bannerid=ban.`bannerid`  join `gjx_core_db`.ox_campaigns cam on ban.`campaignid`=cam.`campaignid` and cam.affiliate_type='WEB_SITES-DESKTOP' and cam.`campaign_type`='BRANDAD' where  str_to_date(concat(b.date ,' ',concat(b.hour,':',b.bucket)),'%Y-%m-%d %H:%i') between str_to_date(:strTime, '%Y-%m-%d %H:%i') and str_to_date(:enTime, '%Y-%m-%d %H:%i')";
+        String query ="select  sum(b.bcn) as metric from `gjx_bi_hly_cdv_znbn_tz` b join `gjx_core_db`.ox_banners ban on b.bannerid=ban.`bannerid`  join `gjx_core_db`.ox_campaigns cam on ban.`campaignid`=cam.`campaignid` and cam.affiliate_type='WEB_SITES-DESKTOP' and cam.`campaign_type`='BRANDAD' where  str_to_date(concat(b.date ,' ',concat(b.hour,':',b.bucket)),'%Y-%m-%d %H:%i') between str_to_date(:strTime, '%Y-%m-%d %H:%i') and str_to_date(:enTime, '%Y-%m-%d %H:%i')";
         return getSumIntervals(handle,query,startTime,endTime);
     }
 

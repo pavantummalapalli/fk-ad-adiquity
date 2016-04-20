@@ -20,4 +20,14 @@ public interface FillRateExternalizedSqlDAO {
     @SqlQuery("select sum(`req`) as requests from gjx_tmp_hrl_zone a where  date_add(a.date ,  interval a.hour hour) between str_to_date(:strTime, '%Y-%m-%d %H:%i') and str_to_date(:enTime, '%Y-%m-%d %H:%i') and zoneid in (<zoneIds>)")
     String getRequests(@BindIn("zoneIds") List<String> zoneIds, @Bind("strTime")String strTime, @Bind("enTime")String enTime);
 
+
+    @SqlQuery("select :sumOfImpressions/sum(`req`)*100 as metric from gjx_rpt_zn_atm a where zoneid in (<zoneIds>)")
+    String getTotalFillRate(@Bind("sumOfImpressions") double sumOfImpressions, @BindIn("zoneIds") List<String> zoneIds);
+
+    @SqlQuery("select sum(`req`) as requests from gjx_rpt_zn_atm a  where  a.zoneid in (<zoneIds>)")
+    String getTotalRequests(@BindIn("zoneIds") List<String> zoneIds);
+
+
+
+
 }
