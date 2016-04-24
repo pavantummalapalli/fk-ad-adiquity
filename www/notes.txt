@@ -1,0 +1,4 @@
+class="md-tall"  -  is used to extend the toolbar size
+The layout-align="space-around center" is used to add some space around the elements within the row.
+The layout-align="space-between center" is used to add some space between the elements within the row, this pushes the elements out to the sides.
+

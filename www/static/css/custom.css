@@ -1,0 +1,92 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+
+
+/* just decorations to have fixed width for images found on the web */
+.crop {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.crop img {
+  height: 50px;
+}
+
+.blue {
+    background-color:rgb(63,81,181);
+    color:rgba(255,255,255,0.87);
+}
+
+.demo-source-tabs.ng-hide {
+  min-height: 0;
+  height: 0;
+}
+.demo-source-tabs {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+.demo-content {
+  position: relative;
+  overflow:hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.small-demo .demo-source-tabs:not(.ng-hide) {
+  height: 224px;
+}
+.small-demo .demo-content {
+  min-height: 128px;
+}
+
+.card-media {
+  background-color: #999999; }
+
+.circle {
+    border-style: solid;
+    border-color: #0000ff;
+    width: 10px;
+    height: 10px;
+    background: white;
+}
+
+
+.card{
+    box-sizing:border-box;
+    margin:8px;
+    box-shadow:0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+
+@media screen and (max-device-width : 320px)
+{
+  body or yourdiv element
+  {
+    font:<size>px/em/cm;
+  }
+}
+
+@media only screen and (min-device-width : 1025px) {
+    .fontsize {
+        font:30px;
+    }
+}
+
+
+@media screen and (max-device-width : 1024px)
+{
+  .fontsize
+  {
+    font:10px;
+  }
+}

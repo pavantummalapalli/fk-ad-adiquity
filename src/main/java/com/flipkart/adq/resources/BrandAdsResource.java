@@ -50,7 +50,6 @@ import java.util.stream.Stream;
  *  *  * Created by pavan.t on 12/01/16.
  *   *   */
 
-
 /*
       /apptotalrequests
       /appintervalrequests
@@ -108,6 +107,8 @@ import java.util.stream.Stream;
 
 @Path("/services/ticker")
 public class BrandAdsResource  {
+
+
     public static final BigDecimal ONE_HUNDRED = new BigDecimal(100);
     private static final Joiner JOINER = Joiner.on(",");
     Handle handle;
@@ -165,7 +166,6 @@ public class BrandAdsResource  {
 
         String strTime = convertStringToDateTime(startTime);
         String enTime = convertStringToDateTime(endTime);
-
 
 
         LinkedHashMap<String,Double> intervalViewsMap = handle.createQuery(query).bind("strTime",strTime).bind("enTime",enTime).fold(new LinkedHashMap<String,Double>(), new Folder2<LinkedHashMap<String, Double>>() {
@@ -288,7 +288,7 @@ public class BrandAdsResource  {
     @Path("/apptotalactionrate")
     @Produces("application/json")
     public Response appTotalActionRate(){
-        String query="select  (sum(a.cli))/sum(b.view)*100 as metric from gjx_cdv_bnzn_action_atm_tz b  join `gjx_cdv_atm_znbn_tz` a on a.bannerid = b.bannerid and a.zoneid=b.zoneid and a.date=b.date join `gjx_core_db`.ox_banners ban on b.bannerid=ban.`bannerid`  join `gjx_core_db`.ox_campaigns cam on ban.`campaignid`=cam.`campaignid` and cam.affiliate_type='ANDROID_APPS' and cam.`campaign_type`='BRANDAD';";
+        String query="select (sum(a.cli))/sum(b.view)*100 as metric from gjx_cdv_bnzn_action_atm_tz b  join `gjx_cdv_atm_znbn_tz` a on a.bannerid = b.bannerid and a.zoneid=b.zoneid and a.date=b.date join `gjx_core_db`.ox_banners ban on b.bannerid=ban.`bannerid`  join `gjx_core_db`.ox_campaigns cam on ban.`campaignid`=cam.`campaignid` and cam.affiliate_type='ANDROID_APPS' and cam.`campaign_type`='BRANDAD';";
         return getTotals(handle,query);
     }
 
@@ -655,6 +655,7 @@ public class BrandAdsResource  {
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
     }
+
 
     @GET
     @Path("/apptotalfillrate")

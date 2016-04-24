@@ -1,0 +1,92 @@
+<div class="customborder">
+<div>
+    <md-toolbar class="demo-toolbar md-primary">
+        <div class="md-toolbar-tools">
+            <h3 class="ng-binding">{{ graphCtrl.title }}</h3>
+
+            <span flex="" class="flex"></span>
+            <md-menu>
+                <md-button ng-click="$mdOpenMenu()">
+                    Refresh Every..
+                </md-button>
+                <md-menu-content>
+                    <md-menu-item>
+                        <md-button ng-click="every30()">
+                            every 30 minutes
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="every45()">
+                            every 45 minutes
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="every1hr()">
+                            every 1 hour
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="every2hrs()">
+                            every 2 hours
+                        </md-button>
+                    </md-menu-item>
+
+                </md-menu-content>
+            </md-menu>
+
+            <button class="md-icon-button md-button md-ink-ripple active" type="button"  aria-label="View Source" ng-class="{ active: showSource }" ng-click="graphCtrl.showSource = !graphCtrl.showSource">
+
+                <md-icon md-svg-src="/static/img/icons/ic_code_24px.svg" class="ng-scope ng-isolate-scope" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path>
+                </svg></md-icon>
+                <div class="md-ripple-container"></div></button>
+        </div>
+    </md-toolbar>
+
+    <div layout="row" class="demo-source-tabs" layout-padding layout-align="end start" ng-show="graphCtrl.showSource" aria-hidden="false">
+        <div layout="column" layout-padding>
+            <md-button class="md-primary" aria-label="3hours" ng-click="last3hours()">Last 3 Hours</md-button>
+            <md-button class="md-primary" aria-label="6hours" ng-click="last6hours()">Last 6 Hours</md-button>
+            <md-button class="md-primary" aria-label="12hours" ng-click="last12hours()">Last 12 Hours</md-button>
+            <md-button class="md-primary" aria-label="24hours" ng-click="last24hours()">Last 24 Hours</md-button>
+        </div>
+        <div layout="column" layout-padding>
+            <md-button class="md-primary" aria-label="1day"  ng-click="last1day()">Last 1 Day</md-button>
+            <md-button class="md-primary" aria-label="2days" ng-click="last2days()">last 2 Days</md-button>
+            <md-button class="md-primary" aria-label="4days" ng-click="last3days()">last 4 Days</md-button>
+            <md-button class="md-primary" aria-label="5days" ng-click="last4days()">last 5 Days</md-button>
+            <md-button class="md-primary" aria-label="1week" ng-click="last1week()">last 1 Week</md-button>
+        </div>
+        <div layout="row" layout-padding>
+
+            <form name="form" ng-submit="form.$valid && submit()" novalidate>
+
+                <md-datepicker ng-model="starttime" md-placeholder="start date">
+                </md-datepicker>
+
+                <md-datepicker ng-model="endtime" md-placeholder="end date">
+                </md-datepicker>
+
+
+                <md-input-container>
+                    <md-button type="reset" class="md-primary"
+                               aria-label="Save Project">clear</md-button>
+                </md-input-container>
+
+                <md-input-container>
+                    <md-button type="submit" class="md-primary"
+                               aria-label="Save Project">search</md-button>
+                </md-input-container>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+<div>
+    <div id="render-part" style="height: 400px"></div>
+</div>
+</div>

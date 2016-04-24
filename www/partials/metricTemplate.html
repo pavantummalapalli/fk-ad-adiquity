@@ -1,0 +1,34 @@
+<div  layout-padding  class="card">
+        <div layout="row"  layout-align="start center">
+            <div flex="30"><span style="color:#3F51B5;"><b>{{metricCtrl.title}}</b></span></div>
+            <div layout="row" flex="70" layout-align="end end" >
+                <div ng-repeat="metric in metrics"><ng-md-icon icon="{{metric.icon}}" style="fill:{{metric.color}}" size="20"></ng-md-icon></div>
+            </div>
+        </div>
+
+
+        <div layout="row"  layout-align="space-between start" >
+
+        <div layout="column" ng-repeat="metric in metrics" >
+           <div layout-wrap   layout-margin style="border:1px solid;border-color:{{metric.color}};color:{{metric.color}};">
+            <div layout="row" layout-margin layout-align="space-between start">
+                <div><i style="font-size:30px;">Total</i></div>
+                <div><i style="font-size:30px;">{{metric.totalRes}}</i></div>
+            </div>
+            <div layout="row" layout-margin layout-align="space-between start">
+                <div><i style="font-size:30px;">L-24hrs</i></div>
+                <div><i style="font-size:30px;">{{metric.l24hrpromise}}</i></div>
+            </div>
+            <div layout="row" layout-margin layout-align="space-between start">
+                <div><i style="font-size:30px;">L-7Days</i></div>
+                <div><i style="font-size:30px;">{{metric.l7daysPromise}}</i></div>
+            </div>
+           </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
