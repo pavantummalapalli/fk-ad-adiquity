@@ -2,66 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0bb8a08-d596-4818-b360-14dbd59d0620" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump.rdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/icons/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/img/flaplogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/FileAPI.flash.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/notes.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/pagination/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/pagination/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/pagination/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/pagination/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/pagination/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/partials/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/partials/brandads.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/partials/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/partials/graph.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/partials/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/partials/metricTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/partials/metrics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/css/angular-carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/css/angular-material.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/css/angular-material.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/css/custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/css/material-datetimepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/css/md-data-table-style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/fonts/font-awesome-animation.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/fonts/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/img/icons/ic_code_24px.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/controllers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/directives.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/highchartsample.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/FileAPI.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-animate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-animate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-aria.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-aria.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-cookies.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-cookies.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-material-datetimepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-material.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-material.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-messages.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-route.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-route.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-sanitize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular-sanitize.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/jquery-2.2.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/md-data-table-templates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/md-data-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/lib/ng-file-upload-all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/static/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/flipkart/adq/resources/BrandAdsResource.class" afterPath="$PROJECT_DIR$/target/classes/com/flipkart/adq/resources/BrandAdsResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/adq/resources/BrandAdsResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/adq/resources/BrandAdsResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/www.iml" afterPath="$PROJECT_DIR$/www/www.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/static/js/services.js" afterPath="$PROJECT_DIR$/www/static/js/services.js" />
     </list>
     <ignored path="flipkart-adiquity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,28 +29,28 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625">
-              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            <state vertical-scroll-proportion="-10.625">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/partials/footer.html">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/static/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graph.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/partials/graph.html">
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/static/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,26 +81,28 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="20" column="84" selection-start-line="20" selection-start-column="84" selection-end-line="20" selection-end-column="84" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directives.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="directives.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/static/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8137536">
-              <caret line="302" column="78" selection-start-line="302" selection-start-column="78" selection-end-line="302" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="408" column="0" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metrics.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/partials/metrics.html">
+      <file leaf-file-name="services.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/static/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.042979944">
+              <caret line="1" column="65" selection-start-line="1" selection-start-column="65" selection-end-line="1" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -212,10 +157,11 @@
         <option value="$PROJECT_DIR$/www/static/js/app.js" />
         <option value="$PROJECT_DIR$/www/partials/header.html" />
         <option value="$PROJECT_DIR$/www/partials/metricTemplate.html" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/static/css/custom.css" />
         <option value="$PROJECT_DIR$/www/partials/metrics.html" />
         <option value="$PROJECT_DIR$/www/static/js/directives.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/static/js/services.js" />
       </list>
     </option>
   </component>
@@ -904,7 +850,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461132019164</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding UI..">
+      <created>1461493724787</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1461493724787</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -915,10 +867,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38897893" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38897893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38897893" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32471728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.46043167" order="0" side_tool="false" content_ui="combo" />
@@ -948,7 +900,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding total fillRate and total requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding total fillRate and total requests" />
+    <MESSAGE value="Adding UI.." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding UI.." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1003,7 +956,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="84" selection-start-line="20" selection-start-column="84" selection-end-line="20" selection-end-column="84" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1196,27 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1228,6 +1162,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1292,7 +1227,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="84" selection-start-line="20" selection-start-column="84" selection-end-line="20" selection-end-column="84" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1306,16 +1243,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state vertical-scroll-proportion="-10.625">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/static/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8137536">
-          <caret line="302" column="78" selection-start-line="302" selection-start-column="78" selection-end-line="302" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="408" column="0" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.042979944">
+          <caret line="1" column="65" selection-start-line="1" selection-start-column="65" selection-end-line="1" selection-end-column="65" />
           <folding />
         </state>
       </provider>

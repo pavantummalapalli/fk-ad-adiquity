@@ -1,5 +1,5 @@
 function getConstants(){
-        var baseUrl="http://localhost:25916/services/ticker";
+        var baseUrl="http://108.178.60.18:25916/services/ticker";
         return {
             appsumintervalrequests:baseUrl+"/appsumintervalrequests",
             appsumintervalfillrate:baseUrl+"/appsumintervalfillrate",
